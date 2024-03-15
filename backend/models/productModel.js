@@ -1,4 +1,4 @@
-import mongoose, { mongo } from "mongoose";
+import mongoose from "mongoose";
 
 const reviewSchema = new mongoose.Schema(
   {
@@ -24,6 +24,7 @@ const reviewSchema = new mongoose.Schema(
     timestamps: true,
   }
 );
+
 const productSchema = new mongoose.Schema(
   {
     user: {
@@ -32,7 +33,7 @@ const productSchema = new mongoose.Schema(
       ref: "User",
     },
     name: {
-      name: String,
+      type: String, // Buradaki hata düzeltildi
       required: true,
     },
     image: {

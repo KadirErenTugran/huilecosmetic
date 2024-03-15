@@ -110,6 +110,6 @@ const orderModel = new mongoose.Schema(
   }
 );
 
-const Order=mongoose.Schema("Order",orderModel);
+const Order=mongoose.model("Order",orderModel);
 
 export default Order;
